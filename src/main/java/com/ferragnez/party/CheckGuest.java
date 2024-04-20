@@ -18,24 +18,36 @@ public class CheckGuest {
 						"Bebe Vio", "Luis", "Martina Maccherone", "Rachel Zeilic"};
 		
 		
-		System.out.println("Verra effettuata una ricerca nella lista degli invitati" + " Entrerai solamete se sei dentro la lista");
+		System.out.println("Verra effettuata una ricerca nella lista degli invitati," + " Entrerai solamete se sei dentro la lista");
 				
 		System.out.println("Inserisci il tuo nominativo");
 		
 		Scanner scan = new Scanner(System.in);
 		String nomeDaVerificare = scan.nextLine();
 		
-		for(int i = 0; i < listaInvitati.length; i++) {
+		/*for(int i = 0; i < listaInvitati.length; i++) {
 			if (listaInvitati[i].equalsIgnoreCase(nomeDaVerificare)) {
 				System.out.println("Benvenuto al party Ferragnez " + nomeDaVerificare + "!");
 					scan.close();
 					return;
-			} 
-		}
+			 }*/ 
+		int i = 0;
+        while (i < listaInvitati.length) {
+            if (listaInvitati[i].equalsIgnoreCase(nomeDaVerificare)) {
+                System.out.println("Benvenuto al party Ferragnez " + nomeDaVerificare + "!");
+                scan.close();
+                return;
+            }
+            i++;
+        }
 			
-			System.out.println("Mi dispiace, " + nomeDaVerificare + " non ti si caga nessuno, torna da dove sei venuto!");
+		System.out.println("Mi dispiace, " + nomeDaVerificare + " non ti si caga nessuno, torna da dove sei venuto!");
 				scan.close();
 				
-	}
+	}		
+		
+};
+					
+	
 
-	};
+
